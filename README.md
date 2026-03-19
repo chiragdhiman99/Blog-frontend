@@ -16,7 +16,6 @@
 
 <br/>
 
-![Blogify Preview](https://via.placeholder.com/900x400/1a1a2e/FFD700?text=BLOGIFY+✦+Modern+Blog+Platform)
 
 </div>
 
