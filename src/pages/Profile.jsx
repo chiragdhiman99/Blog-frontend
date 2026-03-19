@@ -62,7 +62,9 @@ const[userposts, setUserPosts] = useState([]);
     setIsEditing(false);
   };
 
-  const url = "http://localhost:5000/api/posts/getpost";
+  const url = "https://blog-backend-2nfz.onrender.com/api/posts/getpost";
+
+
 
   useEffect(() => {
     axios
@@ -82,7 +84,9 @@ const[userposts, setUserPosts] = useState([]);
       const user = jwtDecode(token);
   
       axios
-        .get(`http://localhost:5000/api/users/getusers?userId=${user.id}`)
+        .get(`https://blog-backend-2nfz.onrender.com
+
+/api/users/getusers?userId=${user.id}`)
         .then((res) => {
           console.log(res.data);
           setRandomUsers(res.data);
@@ -93,7 +97,9 @@ const[userposts, setUserPosts] = useState([]);
     }, []);
 
 useEffect(() => {
-  axios.get(`http://localhost:5000/api/posts/user/${user.name}`)
+  axios.get(`https://blog-backend-2nfz.onrender.com
+
+/api/posts/user/${user.name}`)
     .then((res) => {
       console.log(res.data)
       setUserPosts(res.data)

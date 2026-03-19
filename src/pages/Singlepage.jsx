@@ -26,15 +26,21 @@ function SinglePage() {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5000/api/posts/getpost/${id}`).then((res) => {
-      setPost(res.data);
-      setLikes(res.data.likes.length);
-      setComments(res.data.comments); // ye add karo
-      const token = localStorage.getItem("token");
-      const user = jwtDecode(token);
-      setLiked(res.data.likes.includes(user.id));
-      setLoading(false);
-    });
+    axios
+      .get(
+        `https://blog-backend-2nfz.onrender.com
+
+/api/posts/getpost/${id}`,
+      )
+      .then((res) => {
+        setPost(res.data);
+        setLikes(res.data.likes.length);
+        setComments(res.data.comments); // ye add karo
+        const token = localStorage.getItem("token");
+        const user = jwtDecode(token);
+        setLiked(res.data.likes.includes(user.id));
+        setLoading(false);
+      });
   }, [id]);
 
   const handlelike = (id) => {
@@ -43,7 +49,12 @@ function SinglePage() {
     setLiked((prev) => !prev);
 
     axios
-      .put(`http://localhost:5000/api/posts/${id}/like`, { userId: user.id })
+      .put(
+        `https://blog-backend-2nfz.onrender.com
+
+/api/posts/${id}/like`,
+        { userId: user.id },
+      )
       .then((res) => {
         setLikes(res.data.likes);
       })
@@ -56,11 +67,15 @@ function SinglePage() {
     const token = localStorage.getItem("token");
     const user = jwtDecode(token);
     axios
-      .post(`http://localhost:5000/api/posts/${id}/comment`, {
-        userId: user.id,
-        userName: user.name,
-        comment: comment,
-      })
+      .post(
+        `https://blog-backend-2nfz.onrender.com
+/api/posts/${id}/comment`,
+        {
+          userId: user.id,
+          userName: user.name,
+          comment: comment,
+        },
+      )
       .then((res) => {
         setComments(res.data.comments);
         setComment("");
@@ -111,7 +126,11 @@ function SinglePage() {
 
   const handleDeleteComment = (commentId) => {
     axios
-      .delete(`http://localhost:5000/api/posts/${id}/comment/${commentId}`)
+      .delete(
+        `https://blog-backend-2nfz.onrender.com
+
+/api/posts/${id}/comment/${commentId}`,
+      )
       .then((res) => {
         setComments(res.data.comments);
       })
@@ -208,7 +227,7 @@ function SinglePage() {
                 })}
               </p>
             </div>
-            { !exist && (
+            {!exist && (
               <button className="ml-auto text-[10px] tracking-widest uppercase text-zinc-600 border border-zinc-800 px-3 py-1.5 hover:border-amber-400/40 hover:text-amber-400 transition-all cursor-pointer">
                 Follow
               </button>

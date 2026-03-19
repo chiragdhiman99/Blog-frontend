@@ -46,7 +46,9 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const url = "http://localhost:5000/api/auth/login";
+  const url = "https://blog-backend-2nfz.onrender.com/api/auth/login";
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

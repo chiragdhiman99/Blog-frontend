@@ -67,7 +67,9 @@ const Signup = () => {
   const strength = getStrength(password);
   const cfg = strengthConfig[Math.max(0, strength - 1)];
 
-  const url = "http://localhost:5000/api/auth/signup";
+  const url = "https://blog-backend-2nfz.onrender.com/api/auth/signup";
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

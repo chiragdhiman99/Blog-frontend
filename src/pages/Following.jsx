@@ -38,7 +38,9 @@ export default function FollowingSection({ users = dummyFollowing }) {
     const user = jwtDecode(token);
 
     axios
-      .get(`http://localhost:5000/api/users/getusers?userId=${user.id}`)
+      .get(`https://blog-backend-2nfz.onrender.com
+
+/api/users/getusers?userId=${user.id}`)
       .then((res) => {
         console.log(res.data);
         setRandomUsers(res.data);

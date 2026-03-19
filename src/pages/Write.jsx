@@ -41,7 +41,9 @@ const Write = () => {
 
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
-   const url = "http://localhost:5000/api/posts/createpost";
+   const url = "https://blog-backend-2nfz.onrender.com/api/posts/createpost";
+
+
 
   const handlePublish = async () => {
    

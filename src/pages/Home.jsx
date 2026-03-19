@@ -196,7 +196,9 @@ export default function Home() {
   const [followedUsers, setFollowedUsers] = useState(0);
   const navigate = useNavigate();
 
-  const url = "http://localhost:5000/api/posts/getpost";
+  const url = "https://blog-backend-2nfz.onrender.com/api/posts/getpost";
+
+
 
   useEffect(() => {
     setLoading(true);
@@ -235,7 +237,9 @@ export default function Home() {
     );
 
     axios
-      .put(`http://localhost:5000/api/posts/${postId}/like`, {
+      .put(`https://blog-backend-2nfz.onrender.com
+
+/api/posts/${postId}/like`, {
         userId: user.id,
       })
       .catch((err) => console.log(err));
@@ -246,7 +250,9 @@ export default function Home() {
     const user = jwtDecode(token);
 
     axios
-      .get(`http://localhost:5000/api/users/getusers?userId=${user.id}`)
+      .get(`https://blog-backend-2nfz.onrender.com
+
+/api/users/getusers?userId=${user.id}`)
       .then((res) => {
         console.log(res.data);
         setRandomUsers(res.data);
@@ -269,7 +275,9 @@ export default function Home() {
     );
 
     axios
-      .put(`http://localhost:5000/api/users/${id}/follow`, {
+      .put(`https://blog-backend-2nfz.onrender.com
+
+/api/users/${id}/follow`, {
         userId: user.id,
       })
       .catch((err) => console.log(err));
