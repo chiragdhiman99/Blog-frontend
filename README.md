@@ -19,6 +19,7 @@
 
 
 </div>
+Live url : https://blog-frontend-seven-orcin.vercel.app
 
 ---
 
@@ -39,7 +40,6 @@
 |--------|-------------|
 | 🔐 **Authentication** | Secure JWT-based login & signup |
 | 📝 **Create Posts** | Rich blog post creation with title, content & images |
-| 🖼️ **Image Upload** | Upload cover images for your posts |
 | 👤 **User Profiles** | Personal profiles with bio and post history |
 | 📖 **Read Posts** | Clean, distraction-free reading experience |
 | ✏️ **Edit & Delete** | Full control over your own content |
