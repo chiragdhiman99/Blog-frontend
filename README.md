@@ -22,6 +22,17 @@
 
 ---
 
+## 📌 About This Project
+
+> **⚠️ Heads up!** This project is primarily built as a **backend-focused practice project**.
+> The main goal was to design and implement a robust REST API with Node.js, Express & MongoDB —
+> authentication, protected routes, CRUD operations, and real-world deployment.
+>
+> The frontend is kept minimal and simple — just enough to interact with the API and see it in action.
+> It's **not** a fully polished UI product, but a learning ground for backend development. 💪
+
+---
+
 ## ✨ Features
 
 | Feature | Description |
@@ -102,24 +113,31 @@ Open [http://localhost:5173](http://localhost:5173) in your browser 🎉
 Blog-frontend/
 ├── 📂 public/
 ├── 📂 src/
+│   ├── 📂 assets/           # Static assets (images, icons)
 │   ├── 📂 components/       # Reusable UI components
+│   │   ├── Footer.jsx
 │   │   ├── Navbar.jsx
-│   │   ├── PostCard.jsx
-│   │   └── ...
+│   │   ├── Postcard.jsx
+│   │   ├── Protected.jsx    # Protected route wrapper
+│   │   └── Sidebar.jsx
 │   ├── 📂 pages/            # Page-level components
+│   │   ├── Following.jsx
 │   │   ├── Home.jsx
 │   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── CreatePost.jsx
-│   │   ├── PostDetail.jsx
-│   │   └── Profile.jsx
-│   ├── 📂 context/          # React Context (Auth state)
+│   │   ├── Profile.jsx
+│   │   ├── Signup.jsx
+│   │   ├── Singlepage.jsx   # Individual post view
+│   │   └── Write.jsx        # Create / edit post
+│   ├── App.css
 │   ├── App.jsx              # Routes & App entry
+│   ├── index.css
 │   └── main.jsx
-├── .env
-├── vite.config.js
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
 ├── vercel.json              # Vercel SPA routing fix
-└── package.json
+└── vite.config.js
 ```
 
 ---
